@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://soap2dayhd.vercel.app/sitemap.xml
