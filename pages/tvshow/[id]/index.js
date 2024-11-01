@@ -1439,6 +1439,7 @@ export default function MovieDetail({ movie }) {
   );
 }
 
+export const runtime = 'edge'; // Add this line at the top
 // Use getStaticPaths to generate static pages
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), "public", "tvshow.json");

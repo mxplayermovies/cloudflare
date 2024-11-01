@@ -373,6 +373,7 @@ const HomePage = ({ categorizedItems }) => {
   );
 };
 
+export const runtime = 'edge'; // Add this line at the top
 // SSG: Get static props at build time
 export async function getStaticProps() {
   // Categorize items from the JSON
