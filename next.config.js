@@ -30,8 +30,11 @@
 //   },
 // };
 
-// next.config.js
-module.exports = {
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+module.exports = withBundleAnalyzer({
   /* Custom webpack configuration */
   webpack: (config, { dev, isServer }) => {
     // Modify webpack configuration here
@@ -58,8 +61,4 @@ module.exports = {
       },
     ],
   },
-  // Enabling future/experimental features for Next.js
-  experimental: {
-    appDir: true, // Enable app directory for Next.js 13+
-  },
-};
+});
